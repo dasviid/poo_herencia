@@ -4,6 +4,8 @@ import ar.davidbarre.pooherencia.*;
 
 public class EjemploHerencia {
     public static void main(String[] args) {
+
+        System.out.println("======= Creando la instancia de objeto alumno =======");
         Alumno alumno = new Alumno();
         alumno.setNombre("Pepe");
         alumno.setApellido("Gonzalez");
@@ -12,6 +14,7 @@ public class EjemploHerencia {
         alumno.setNotaFisica(3.3);
         alumno.setNotaMatematica(5.2);
 
+        System.out.println("======= Creando la instancia de objeto alumno internacional =======");
         AlumnoInternacional alumnoInt = new AlumnoInternacional();
         alumnoInt.setNombre("Jake");
         alumnoInt.setApellido("Paul");
@@ -23,11 +26,13 @@ public class EjemploHerencia {
         alumnoInt.setNotaFisica(6.2);
         alumnoInt.setNotaMatematica(7.2);
 
+        System.out.println("======= Creando la instancia de objeto profesor =======");
         Profesor profesor = new Profesor();
         profesor.setNombre("Juan");
         profesor.setApellido("Vidal");
         profesor.setAsignatura("Matematicas");
 
+        System.out.println("=========");
         System.out.println(alumno.getNombre() + " " + alumno.getApellido() + ", " + ((Alumno) alumno).getColegio());
         System.out.println(alumnoInt.getNombre()
         + " " + alumnoInt.getApellido()

@@ -5,6 +5,9 @@ public class AlumnoInternacional extends Alumno {
     private String pais;
     private double notaIdiomas;
 
+    public AlumnoInternacional(){
+        System.out.println("Alumno internacional inicializando constructor");
+    }
     public String getPais() {
         return pais;
     }
