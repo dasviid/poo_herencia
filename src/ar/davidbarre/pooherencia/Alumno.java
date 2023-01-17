@@ -1,6 +1,6 @@
 package ar.davidbarre.pooherencia;
 
-public class Alumno extends Persona{
+public class Alumno extends Persona {
     private String colegio;
     private double notaMatematica;
     private double notaCastellano;
