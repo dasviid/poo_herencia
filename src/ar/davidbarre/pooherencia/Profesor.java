@@ -4,7 +4,7 @@ public class Profesor extends Persona {
     private String asignatura;
 
     public Profesor(){
-        System.out.println("Profesor inicializando constructor");
+
     }
 
     public Profesor(String nombre, String apellido){
@@ -22,5 +22,17 @@ public class Profesor extends Persona {
 
     public void setAsignatura(String asignatura) {
         this.asignatura = asignatura;
+    }
+
+    @Override
+    public String saludar(){
+        return super.saludar() + " mi nombre es " + getNombre() +" "+ getApellido()
+                + " y soy el profesor de " + getAsignatura();
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() +
+                "\nasignatura='" + asignatura ;
     }
 }

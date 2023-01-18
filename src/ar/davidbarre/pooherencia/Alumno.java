@@ -7,7 +7,6 @@ public class Alumno extends Persona {
     private double notaFisica;
 
     public Alumno(){
-        System.out.println("Alumno inicalizando constructor");
     }
 
     public Alumno(String nombre, String apellido){
@@ -60,5 +59,24 @@ public class Alumno extends Persona {
 
     public void setNotaFisica(double notaFisica) {
         this.notaFisica = notaFisica;
+    }
+
+    @Override
+    public String saludar(){
+        return super.saludar() + " mi nombre es " + getNombre() +" "+ getApellido();
+    }
+
+    public double calcularPromedio(){
+      //  System.out.println("calcularPromedio " + Alumno.class.getCanonicalName());
+        return (notaMatematica + notaFisica + notaCastellano )/3;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + "\ncolegio='" + colegio + '\'' +
+                ", notaMatematica=" + notaMatematica +
+                ", notaCastellano=" + notaCastellano +
+                ", notaFisica=" + notaFisica +
+                ", promedio= " + this.calcularPromedio();
     }
 }
